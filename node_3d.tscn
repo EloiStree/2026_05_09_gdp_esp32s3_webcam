@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dmgh3xuhkwoiv"]
+
+[ext_resource type="Script" uid="uid://bchyjtkx88530" path="res://addons/2026_05_09_gdp_esp32s3_webcam/access_mjpeg.gd" id="1_f4v2q"]
+
+[node name="Node3D" type="Node3D" unique_id=141960375]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=670481075]
+
+[node name="Node" type="Node" parent="CanvasLayer" unique_id=447094974 node_paths=PackedStringArray("texture_rect")]
+script = ExtResource("1_f4v2q")
+texture_rect = NodePath("TextureRect")
+STREAM_HOST = "192.168.137.125"
+STREAM_PATH = "/stream?fps=15#/stream?interval=100#/stream?res=qvga&quality=12&fps=20"
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Node" unique_id=466581421]
+anchors_preset = -1
+anchor_right = 0.23300001
+anchor_bottom = 0.333
+offset_left = 1.0
+offset_top = 9.0
+offset_right = 0.5839844
+offset_bottom = 9.216003
+
+[node name="HTTPRequest" type="HTTPRequest" parent="CanvasLayer/Node" unique_id=724250286]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1323382301]
+offset_left = 43.0
+offset_top = 258.0
+offset_right = 83.0
+offset_bottom = 298.0
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1387005568]

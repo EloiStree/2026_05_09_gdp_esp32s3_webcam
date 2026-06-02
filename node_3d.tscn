@@ -9,7 +9,7 @@
 [node name="Node" type="Node" parent="CanvasLayer" unique_id=447094974 node_paths=PackedStringArray("texture_rect")]
 script = ExtResource("1_f4v2q")
 texture_rect = NodePath("TextureRect")
-STREAM_HOST = "192.168.137.125"
+STREAM_HOST = "192.168.137.181"
 STREAM_PATH = "/stream?fps=15#/stream?interval=100#/stream?res=qvga&quality=12&fps=20"
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/Node" unique_id=466581421]

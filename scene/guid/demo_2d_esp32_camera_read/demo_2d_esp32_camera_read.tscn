@@ -1,15 +1,15 @@
 [gd_scene format=3 uid="uid://dmgh3xuhkwoiv"]
 
-[ext_resource type="Script" uid="uid://bchyjtkx88530" path="res://addons/2026_05_09_gdp_esp32s3_webcam/access_mjpeg.gd" id="1_f4v2q"]
+[ext_resource type="Script" uid="uid://bchyjtkx88530" path="res://addons/2026_05_09_gdp_esp32s3_webcam/script/access_mjpeg.gd" id="1_736c7"]
 
 [node name="Node3D" type="Node3D" unique_id=141960375]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=670481075]
 
 [node name="Node" type="Node" parent="CanvasLayer" unique_id=447094974 node_paths=PackedStringArray("texture_rect")]
-script = ExtResource("1_f4v2q")
+script = ExtResource("1_736c7")
 texture_rect = NodePath("TextureRect")
-STREAM_HOST = "192.168.137.181"
+STREAM_HOST = "192.168.137.135"
 STREAM_PATH = "/stream?fps=15#/stream?interval=100#/stream?res=qvga&quality=12&fps=20"
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/Node" unique_id=466581421]

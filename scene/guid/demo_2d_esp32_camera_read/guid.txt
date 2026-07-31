@@ -1,0 +1,10 @@
+6XTabKK7FBAS7fDAKE2XvUvRATNMCCMXHbGRn3Ydojk8
+Display ESP32C3 Camera in Godot
+Demo of how to communicate with ESP32 Camera
+
+Demo of how to connect to a XIAO Arduino Webcamer of an ESP32C3.
+More information here
+
+- https://github.com/EloiStree/2026_03_05_arduino_esp_32_s3_cam_and_ssd1306/blob/main/README.md
+- https://youtu.be/asP3AOQtrQ8?t=238
+- https://youtu.be/5MZ6O6yT73M?t=19

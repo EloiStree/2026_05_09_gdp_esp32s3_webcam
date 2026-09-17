@@ -2,26 +2,11 @@
 
 [ext_resource type="Script" uid="uid://bchyjtkx88530" path="res://addons/2026_05_09_gdp_esp32s3_webcam/script/access_mjpeg.gd" id="1_736c7"]
 
-[node name="Node3D" type="Node3D" unique_id=141960375]
+[node name="Node3D" type="Control" unique_id=317828852]
+layout_mode = 3
+anchors_preset = 0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=670481075]
-
-[node name="Node" type="Node" parent="CanvasLayer" unique_id=447094974 node_paths=PackedStringArray("texture_rect")]
-script = ExtResource("1_736c7")
-texture_rect = NodePath("TextureRect")
-STREAM_HOST = "192.168.137.135"
-STREAM_PATH = "/stream?fps=15#/stream?interval=100#/stream?res=qvga&quality=12&fps=20"
-
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Node" unique_id=466581421]
-anchors_preset = -1
-anchor_right = 0.23300001
-anchor_bottom = 0.333
-offset_left = 1.0
-offset_top = 9.0
-offset_right = 0.5839844
-offset_bottom = 9.216003
-
-[node name="HTTPRequest" type="HTTPRequest" parent="CanvasLayer/Node" unique_id=724250286]
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1323382301]
 offset_left = 43.0
@@ -29,4 +14,38 @@ offset_top = 258.0
 offset_right = 83.0
 offset_bottom = 298.0
 
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer" unique_id=2118138516]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/HBoxContainer" unique_id=466581421]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HTTPRequest" type="HTTPRequest" parent="CanvasLayer/HBoxContainer/TextureRect" unique_id=724250286]
+
+[node name="Node Left 1" type="Node" parent="CanvasLayer/HBoxContainer/TextureRect" unique_id=447094974 node_paths=PackedStringArray("texture_rect")]
+script = ExtResource("1_736c7")
+texture_rect = NodePath("..")
+STREAM_HOST = "192.168.137.133"
+STREAM_PATH = "/stream?fps=15#/stream?interval=100#/stream?res=qvga&quality=12&fps=20"
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/HBoxContainer" unique_id=4986528]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HTTPRequest" type="HTTPRequest" parent="CanvasLayer/HBoxContainer/TextureRect2" unique_id=1210334778]
+
+[node name="Node Right 2" type="Node" parent="CanvasLayer/HBoxContainer/TextureRect2" unique_id=734455865 node_paths=PackedStringArray("texture_rect")]
+script = ExtResource("1_736c7")
+texture_rect = NodePath("..")
+STREAM_HOST = "192.168.137.65"
+STREAM_PATH = "/stream?fps=15#/stream?interval=100#/stream?res=qvga&quality=12&fps=20"
+
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1387005568]
+current = true

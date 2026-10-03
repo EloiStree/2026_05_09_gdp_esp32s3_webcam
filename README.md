@@ -10,3 +10,10 @@ Script to take photo and access mjpeg of the XIAO ESP32S3 Webcam of Arduino
 
 Tutorials:   
 https://github.com/EloiStree/HelloXiaoCamToRXTX   
+
+
+
+For Hotpost in Steam OS:  
+```
+nmcli device wifi hotspot ifname wlan0 ssid SSD1306 password "11234566"
+```
